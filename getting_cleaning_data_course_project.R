@@ -92,9 +92,9 @@ colnames(mydf) <- mydfCols
 
 # group by subject and activity and summarise using mean
 library(dplyr)
-dity <- mydf %>% 
+tidy <- mydf %>% 
   group_by(subject, activity) %>%
   summarise_all(mean)
 
 #creating a tidy dataset file  
-write.table(dataset.tidy, file = "tidydataset.txt", row.names = FALSE)
+write.table(tidy, file = "tidydataset.txt", row.names = FALSE)
