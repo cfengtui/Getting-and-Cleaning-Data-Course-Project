@@ -97,4 +97,4 @@ tidy <- mydf %>%
   summarise_all(mean)
 
 #creating a tidy dataset file  
-write.table(tidy, file = "tidydataset.txt", row.names = FALSE)
+write.table(tidy, file.path(getwd(), "getting_cleaning_data_course_project", "tidydataset.txt"), row.names = FALSE)
